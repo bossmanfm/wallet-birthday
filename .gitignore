@@ -17,6 +17,14 @@ dist-ssr
 .env.local
 .env.*.local
 
+# Hardhat
+cache/
+artifacts/
+
+# Coverage
+coverage/
+coverage.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
