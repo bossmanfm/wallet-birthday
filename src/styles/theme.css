@@ -1,0 +1,36 @@
+:root {
+  /* Primary gradient */
+  --primary-start: #6366f1;
+  --primary-end: #8b5cf6;
+  
+  /* Background */
+  --bg-primary: #0f0f1a;
+  --bg-secondary: #1a1a2e;
+  --bg-card: #16162a;
+  
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  
+  /* Accent */
+  --accent: #f43f5e;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  
+  /* Chain colors */
+  --ethereum: #627eea;
+  --bsc: #f0b90b;
+  --polygon: #8247e5;
+  --arbitrum: #28a0f0;
+  --optimism: #ff0420;
+  --avalanche: #e84142;
+  --base: #0052ff;
+  
+  /* Effects */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
