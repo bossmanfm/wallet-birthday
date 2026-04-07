@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { useAccount, useConnect, useDisconnect, useChainId, useSwitchChain } from 'wagmi';
 import { useWriteContract, useWaitForTransactionReceipt, useReadContract } from 'wagmi';
-import { toPng } from 'html-to-image';
 
 import BirthdayCard from './components/BirthdayCard';
 import { LoadingSpinner } from './components/LoadingSpinner';
@@ -108,26 +107,6 @@ function App() {
       setError('Failed to find first transaction. Please try again.');
     } finally {
       setLoading(false);
-    }
-  };
-  
-  const handleDownloadPNG = async () => {
-    if (!cardRef.current) return;
-    
-    try {
-      const dataUrl = await toPng(cardRef.current, {
-        quality: 1,
-        pixelRatio: 2,
-        backgroundColor: '#1a1a2e',
-      });
-      
-      const link = document.createElement('a');
-      link.download = `wallet-birthday-${formatAddress(address)}.png`;
-      link.href = dataUrl;
-      link.click();
-    } catch (err) {
-      console.error('Error downloading PNG:', err);
-      setError('Failed to download image');
     }
   };
   
@@ -268,10 +247,6 @@ function App() {
             </div>
             
             <div className="card-actions">
-              <button className="btn-secondary" onClick={handleDownloadPNG}>
-                📥 Download PNG
-              </button>
-              
               {mintSuccess ? (
                 <button className="btn-muted" disabled>
                   ✓ Successfully Minted!
