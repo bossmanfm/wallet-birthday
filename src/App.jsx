@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useAccount, useConnect, useDisconnect, useChainId, useSwitchChain } from 'wagmi';
 import { useWriteContract, useWaitForTransactionReceipt, useReadContract } from 'wagmi';
 import { toPng } from 'html-to-image';
@@ -37,7 +37,7 @@ function App() {
   });
   
   // Update UI when transaction is confirmed
-  React.useEffect(() => {
+  useEffect(() => {
     if (isConfirmed && txHash) {
       console.log('[Mint] Transaction confirmed:', txHash);
       setMinting(false);
