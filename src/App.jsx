@@ -123,32 +123,26 @@ function App() {
     setError(null);
     
     try {
+      // Simplified metadata to avoid gas estimation issues
       const metadata = {
-        name: `Wallet Birthday - ${formatAddress(address)}`,
-        description: `This wallet was born on ${new Date(walletData.firstTx.timestamp).toLocaleDateString()}. It is ${walletData.age.days} days old! First tx was on ${walletData.firstTx.chainName}.`,
-        image: `data:image/svg+xml,${encodeURIComponent(cardRef.current?.innerHTML || '')}`,
+        name: `Wallet Birthday #${formatAddress(address)}`,
+        description: `Wallet born on ${walletData.firstTx.chainName} - ${walletData.age.days} days old`,
         attributes: [
-          {
-            trait_type: 'Birthday Timestamp',
-            value: walletData.firstTx.timestamp,
-          },
-          {
-            trait_type: 'Age in Days',
-            value: walletData.age.days,
-          },
-          {
-            trait_type: 'First Block',
-            value: walletData.firstTx.blockNumber.toString(),
-          },
-          {
-            trait_type: 'First Chain',
-            value: walletData.firstTx.chainName,
-          },
+          { trait_type: 'Chain', value: walletData.firstTx.chainName },
+          { trait_type: 'Age', value: `${walletData.age.days} days` },
+          { trait_type: 'Birthday', value: new Date(walletData.firstTx.timestamp).toLocaleDateString() },
         ],
       };
       
-      const metadataUri = `data:application/json,${encodeURIComponent(JSON.stringify(metadata))}`;
+      // Use IPFS-style URI (shorter, more compatible)
+      const metadataUri = `ipfs://wallet-birthday-${address.slice(2, 10)}`;
       setMetadataUri(metadataUri);
+      
+      console.log('[Mint] Starting mint with:', {
+        timestamp: BigInt(Math.floor(walletData.firstTx.timestamp / 1000)),
+        age: BigInt(walletData.age.days),
+        uri: metadataUri,
+      });
       
       writeContract({
         address: CONTRACT_ADDRESS,
@@ -162,7 +156,7 @@ function App() {
       });
     } catch (err) {
       console.error('Error minting NFT:', err);
-      setError('Failed to mint NFT. Please try again.');
+      setError(`Failed to mint NFT: ${err.message || 'Unknown error'}`);
       setMinting(false);
     }
   };
