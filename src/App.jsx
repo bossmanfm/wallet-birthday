@@ -32,9 +32,24 @@ function App() {
   
   const { writeContract, data: txHash, isPending: isWritePending } = useWriteContract();
   
-  const { isLoading: isConfirming, isSuccess: isConfirmed } = useWaitForTransactionReceipt({
+  const { isLoading: isConfirming, isSuccess: isConfirmed, isError: isTxError } = useWaitForTransactionReceipt({
     hash: txHash,
   });
+  
+  // Update UI when transaction is confirmed
+  React.useEffect(() => {
+    if (isConfirmed && txHash) {
+      console.log('[Mint] Transaction confirmed:', txHash);
+      setMinting(false);
+      setMintSuccess(true);
+      setError(null);
+    }
+    if (isTxError) {
+      console.error('[Mint] Transaction failed');
+      setMinting(false);
+      setError('Transaction failed. Please try again.');
+    }
+  }, [isConfirmed, isTxError, txHash]);
   
   // Check if wallet has already minted
   const { data: hasMinted } = useReadContract({
@@ -250,7 +265,11 @@ function App() {
                 📥 Download PNG
               </button>
               
-              {hasMinted ? (
+              {mintSuccess ? (
+                <button className="btn-muted" disabled>
+                  ✓ Successfully Minted!
+                </button>
+              ) : hasMinted ? (
                 <button className="btn-muted" disabled>
                   ✓ Already Minted
                 </button>
