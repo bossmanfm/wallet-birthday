@@ -47,6 +47,41 @@
   --radius-xl: 24px;
 }
 
+/* Connected Wallet Badge */
+.wallet-connected {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 2px solid var(--success);
+  border-radius: var(--radius-md);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.connected-badge {
+  color: var(--success);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-disconnect-small {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid var(--text-muted);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-disconnect-small:hover {
+  border-color: var(--error);
+  color: var(--error);
+  background: rgba(239, 68, 68, 0.1);
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }

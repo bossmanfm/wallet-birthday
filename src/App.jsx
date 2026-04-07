@@ -204,9 +204,18 @@ function App() {
             Find your wallet's first transaction across all chains.
           </p>
           <div className="hero-cta">
-            <button onClick={connectWallet} className="btn-primary">
-              Connect Wallet
-            </button>
+            {isConnected ? (
+              <div className="wallet-connected">
+                <span className="connected-badge">✓ Wallet Connected</span>
+                <button onClick={() => disconnect()} className="btn-disconnect-small">
+                  Disconnect
+                </button>
+              </div>
+            ) : (
+              <button onClick={connectWallet} className="btn-primary">
+                Connect Wallet
+              </button>
+            )}
           </div>
         </div>
       </header>
