@@ -107,6 +107,28 @@ export function calculateAge(timestamp) {
   };
 }
 
+export function getTitleByAge(days) {
+  if (days < 7) {
+    return { title: 'Time Traveler', emoji: '⏰', description: 'Did you just fall out of a DeLorean? Welcome to crypto!' };
+  } else if (days < 30) {
+    return { title: 'Baby Degen', emoji: '🍼', description: 'Still smells like fresh ETH. Don\'t touch the leverage yet!' };
+  } else if (days < 90) {
+    return { title: 'Toddler', emoji: '🧸', description: 'Learning to walk... and accidentally buying memecoins.' };
+  } else if (days < 180) {
+    return { title: 'Young Padawan', emoji: '🌱', description: 'You think you know crypto. You know nothing, Jon Snow.' };
+  } else if (days < 365) {
+    return { title: 'Teenager', emoji: '🎒', description: 'Rebellious phase. Thinks parents (BTC) don\'t understand.' };
+  } else if (days < 730) {
+    return { title: 'Adult', emoji: '👨', description: 'Finally understands compound interest. Has 3 tabs open.' };
+  } else if (days < 1095) {
+    return { title: 'OG', emoji: '🎖️', description: 'Was here before \'WAGMI\' was cool. Still has 2017 bags.' };
+  } else if (days < 1825) {
+    return { title: 'Legend', emoji: '🏆', description: 'Survived Mt. Gox, FTX, and 17 bear markets. Immortal.' };
+  } else {
+    return { title: 'Crypto God', emoji: '👑', description: 'Literally mined Bitcoin on a potato. Owns the blockchain.' };
+  }
+}
+
 export function formatDate(timestamp) {
   return new Date(timestamp).toLocaleDateString('en-US', {
     year: 'numeric',

@@ -1,5 +1,5 @@
 import { QRCodeSVG } from 'qrcode.react';
-import { formatDate, formatAddress, calculateAge } from '../utils/helpers';
+import { formatDate, formatAddress, calculateAge, getTitleByAge } from '../utils/helpers';
 import { getChainExplorerUrl } from '../utils/multiChainFinder';
 
 // Chain color mapping
@@ -36,6 +36,9 @@ const BirthdayCard = ({ walletData }) => {
   const ageInYears = age.years;
   const chainName = firstTx.chainName;
   
+  // Get title and description based on wallet age
+  const { title: walletTitle, emoji: titleEmoji, description: walletDescription } = getTitleByAge(ageInDays);
+  
   // Format the "X days ago" text
   const getDaysAgoText = () => {
     if (age.days === 0) return 'today';
@@ -57,6 +60,15 @@ const BirthdayCard = ({ walletData }) => {
         <div className="wallet-address">
           <span className="address-label">Wallet</span>
           <code>{shortAddress}</code>
+        </div>
+        
+        <div className="wallet-title">
+          <span className="title-emoji">{titleEmoji}</span>
+          <span className="title-text">{walletTitle}</span>
+        </div>
+        
+        <div className="wallet-description">
+          "{walletDescription}"
         </div>
         
         <div className="birthday-info">

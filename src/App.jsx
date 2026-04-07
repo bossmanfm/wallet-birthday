@@ -7,7 +7,7 @@ import BirthdayCard from './components/BirthdayCard';
 import { LoadingSpinner } from './components/LoadingSpinner';
 import { Footer } from './components/Footer';
 import { CONTRACT_ADDRESS, CONTRACT_ABI } from './contracts/config';
-import { calculateAge, formatAddress } from './utils/helpers';
+import { calculateAge, formatAddress, getTitleByAge } from './utils/helpers';
 import { findFirstTxMultiChain, CHAINS } from './utils/multiChainFinder';
 
 import './App.css';
@@ -138,11 +138,17 @@ function App() {
     setError(null);
     
     try {
-      // Simplified metadata to avoid gas estimation issues
+      // Get title based on wallet age
+      const { title: walletTitle, emoji: titleEmoji, description: walletDescription } = getTitleByAge(walletData.age.days);
+      
+      // Metadata with title and description
       const metadata = {
         name: `Wallet Birthday #${formatAddress(address)}`,
-        description: `Wallet born on ${walletData.firstTx.chainName} - ${walletData.age.days} days old`,
+        description: walletDescription,
+        title: walletTitle,
+        image: `data:image/svg+xml,${encodeURIComponent(cardRef.current?.innerHTML || '')}`,
         attributes: [
+          { trait_type: 'Title', value: walletTitle },
           { trait_type: 'Chain', value: walletData.firstTx.chainName },
           { trait_type: 'Age', value: `${walletData.age.days} days` },
           { trait_type: 'Birthday', value: new Date(walletData.firstTx.timestamp).toLocaleDateString() },
@@ -154,6 +160,7 @@ function App() {
       setMetadataUri(metadataUri);
       
       console.log('[Mint] Starting mint with:', {
+        title: walletTitle,
         timestamp: BigInt(Math.floor(walletData.firstTx.timestamp / 1000)),
         age: BigInt(walletData.age.days),
         uri: metadataUri,
