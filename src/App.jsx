@@ -221,15 +221,6 @@ function App() {
       </header>
       
       <main className="main">
-        {isConnected && (
-          <div className="wallet-info">
-            <span className="address">{formatAddress(address)}</span>
-            <button className="btn-disconnect" onClick={() => disconnect()}>
-              Disconnect
-            </button>
-          </div>
-        )}
-        
         {!isCorrectChain && isConnected && (
           <div className="chain-warning">
             <p>Please switch to Base network to mint NFT</p>
