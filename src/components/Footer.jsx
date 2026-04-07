@@ -4,8 +4,8 @@ export function Footer() {
       <div className="footer-content">
         <p className="footer-brand">Built on Base</p>
         <div className="footer-links">
-          <a href="https://github.com/bossmanfm/wallet-birthday" target="_blank" rel="noopener noreferrer">
-            GitHub
+          <a href="https://twitter.com/0xarsy" target="_blank" rel="noopener noreferrer">
+            Twitter/X
           </a>
           <a href="https://base.org" target="_blank" rel="noopener noreferrer">
             Base
