@@ -1,5 +1,5 @@
 // Contract configuration - UPDATE AFTER DEPLOYMENT
-export const CONTRACT_ADDRESS = "0x1234567890123456789012345678901234567890"; // Placeholder - replace after deploy
+export const CONTRACT_ADDRESS = "0x59b5d1f78576f39748232d8e3f9de6a3a905188d"; // Deployed on Base Mainnet
 export const CONTRACT_ABI = [
   {
     "inputs": [],
