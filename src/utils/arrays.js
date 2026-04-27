@@ -64,3 +64,10 @@ export function flatten(arr) {
 export function compact(arr) {
   return arr.filter(Boolean);
 }
+
+/**
+ * Get difference between two arrays
+ */
+export function difference(arr1, arr2) {
+  return arr1.filter(item => !arr2.includes(item));
+}
