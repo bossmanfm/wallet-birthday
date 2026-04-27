@@ -1,20 +1,21 @@
 {
   "name": "Wallet Birthday",
-  "short_name": "Wallet Birthday",
-  "description": "Discover when your crypto journey began. Find your wallet's first transaction across 7 EVM chains and mint a commemorative NFT badge on Base.",
+  "short_name": "WalletBD",
+  "description": "Discover when your wallet was born and mint it as an NFT badge",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f0f1a",
-  "theme_color": "#6366f1",
-  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#0052ff",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  ],
-  "categories": ["nft", "social", "utility"],
-  "screenshots": []
+  ]
 }
