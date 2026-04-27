@@ -79,3 +79,12 @@ export function median(arr) {
   const mid = Math.floor(sorted.length / 2);
   return sorted.length % 2 !== 0 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
 }
+
+/**
+ * Calculate mode of array
+ */
+export function mode(arr) {
+  const counts = {};
+  arr.forEach(val => counts[val] = (counts[val] || 0) + 1);
+  return Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
+}
