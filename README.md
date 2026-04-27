@@ -1,3 +1,4 @@
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 # 🎂 Wallet Birthday
 
 Discover when your wallet was born and mint it as an NFT badge!
