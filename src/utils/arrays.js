@@ -85,3 +85,10 @@ export function intersection(arr1, arr2) {
 export function union(arr1, arr2) {
   return [...new Set([...arr1, ...arr2])];
 }
+
+/**
+ * Remove specific values from array
+ */
+export function without(arr, ...values) {
+  return arr.filter(item => !values.includes(item));
+}
