@@ -1,20 +1,25 @@
+/**
+ * Footer Component
+ * Displays app credits and links
+ * 
+ * Props: None
+ * Returns: JSX footer element
+ */
 export function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-content">
-        <p className="footer-brand">Built on Base</p>
-        <div className="footer-links">
-          <a href="https://twitter.com/0xarsy" target="_blank" rel="noopener noreferrer">
-            Twitter/X
-          </a>
-          <a href="https://base.org" target="_blank" rel="noopener noreferrer">
-            Base
-          </a>
-        </div>
-        <p className="footer-note">
-          Scan 7 chains: Ethereum, BSC, Polygon, Arbitrum, Optimism, Avalanche, Base
-        </p>
-      </div>
+      <p>
+        Built with ❤️ on <a href="https://base.org" target="_blank" rel="noopener noreferrer">Base</a>
+      </p>
+      <p className="footer-links">
+        <a href="https://github.com/bossmanfm/wallet-birthday" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        {' • '}
+        <a href="https://walletbirthday.xyz" target="_blank" rel="noopener noreferrer">
+          WalletBirthday.xyz
+        </a>
+      </p>
     </footer>
   );
 }
