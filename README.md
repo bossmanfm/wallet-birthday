@@ -233,3 +233,20 @@ npm run build
 
 ### 7. Deploy Frontend
 Deploy `dist/` folder to Vercel or any static host.
+
+## FAQ
+
+### How does the wallet birthday finder work?
+It uses binary search on the blockchain to find the first transaction associated with your wallet address across multiple chains.
+
+### Is it free to mint?
+You only pay gas fees on Base network, which are typically very low (<$0.01).
+
+### Can I mint for someone else's wallet?
+Yes, you can look up any wallet's birthday, but you need to connect a wallet to mint.
+
+### What if I minted on the wrong network?
+The NFT is minted on Base mainnet. If you need help, contact the maintainer.
+
+### Why can't I find my wallet birthday?
+Your wallet might not have any on-chain activity yet. Make a transaction first.
