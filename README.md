@@ -263,3 +263,21 @@ MIT License - see LICENSE file for details.
 - [wagmi](https://wagmi.sh) for React hooks
 - [viem](https://viem.sh) for TypeScript Ethereum library
 - [Hardhat](https://hardhat.org) for development environment
+
+## Features Checklist
+
+- [x] Multi-chain wallet birthday detection
+- [x] Binary search optimization
+- [x] Beautiful birthday card UI
+- [x] PNG download functionality
+- [x] NFT minting on Base
+- [x] Age-based titles & descriptions
+- [x] Social sharing (Twitter/X)
+- [x] Link copying with wallet address
+- [x] Wallet connection (MetaMask, Rabby, etc.)
+- [x] Network switching
+- [x] Etherscan API integration
+- [x] Emergency transfer function
+- [x] URI update function
+- [x] Comprehensive test suite
+- [x] Full documentation
