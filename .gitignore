@@ -36,3 +36,24 @@ coverage.json
 *.sln
 *.sw?
 .vercel
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+.env.production
+
+# Coverage
+coverage/
+
+# Build artifacts
+*.tsbuildinfo
