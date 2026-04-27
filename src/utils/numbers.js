@@ -63,3 +63,10 @@ export function average(arr) {
 export function min(arr) {
   return Math.min(...arr);
 }
+
+/**
+ * Get maximum value from array
+ */
+export function max(arr) {
+  return Math.max(...arr);
+}
