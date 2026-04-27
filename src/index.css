@@ -57,3 +57,9 @@ button:focus:not(:focus-visible) {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* === Text Selection === */
+::selection {
+  background: var(--accent-primary, #0052ff);
+  color: white;
+}
