@@ -37,6 +37,10 @@ contract WalletBirthday is ERC721, Ownable {
     /**
      * @dev Mint birthday NFT with comprehensive validation
      */
+    /// @notice Mint a birthday NFT badge for the caller
+    /// @param firstTxTimestamp The timestamp of the first transaction
+    /// @param ageInDays The age of the wallet in days
+    /// @param uri The metadata URI for the NFT
     function mintBirthday(
         uint256 firstTxTimestamp,
         uint256 ageInDays,
