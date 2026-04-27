@@ -5,6 +5,8 @@
 import { expect } from "chai";
 
 describe("WalletBirthday", function () {
+  // Deployment tests
+
   let walletBirthday;
   let owner;
   let addr1;
