@@ -121,3 +121,12 @@ export function startOfDay(timestamp) {
   date.setHours(0, 0, 0, 0);
   return date.getTime();
 }
+
+/**
+ * Get end of day timestamp
+ */
+export function endOfDay(timestamp) {
+  const date = new Date(timestamp);
+  date.setHours(23, 59, 59, 999);
+  return date.getTime();
+}
