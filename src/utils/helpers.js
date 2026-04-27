@@ -206,3 +206,10 @@ export function sleep(ms) {
 export function toHex(num) {
   return '0x' + Number(num).toString(16);
 }
+
+/**
+ * Convert hex string to number
+ */
+export function fromHex(hex) {
+  return parseInt(hex.replace('0x', ''), 16);
+}
