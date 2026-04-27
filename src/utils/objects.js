@@ -72,3 +72,10 @@ export function mapKeys(obj, fn) {
 export function invert(obj) {
   return Object.fromEntries(Object.entries(obj).map(([k, v]) => [v, k]));
 }
+
+/**
+ * Check if object has property
+ */
+export function has(obj, key) {
+  return Object.prototype.hasOwnProperty.call(obj, key);
+}
