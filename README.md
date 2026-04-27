@@ -140,3 +140,23 @@ npx hardhat test
 ## License
 
 MIT
+
+## Architecture
+
+### Frontend
+- **Framework**: React with Vite
+- **State Management**: React hooks
+- **Wallet Integration**: wagmi + viem
+- **Styling**: CSS with custom theme
+- **Image Generation**: html-to-image
+
+### Smart Contract
+- **Standard**: ERC721 (NFT)
+- **Network**: Base (Ethereum L2)
+- **Access Control**: OpenZeppelin Ownable
+- **Development**: Hardhat
+
+### Scanning Algorithm
+- **Method**: Binary search on public RPC
+- **Optimization**: Etherscan API (optional)
+- **Multi-chain**: Scans across multiple networks
