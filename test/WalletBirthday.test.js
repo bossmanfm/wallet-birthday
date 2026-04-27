@@ -1,3 +1,7 @@
+/**
+ * WalletBirthday Smart Contract Test Suite
+ * Tests all contract functions for correctness and security
+ */
 import { expect } from "chai";
 
 describe("WalletBirthday", function () {
