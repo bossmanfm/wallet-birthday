@@ -1,3 +1,7 @@
+/**
+ * Application Entry Point
+ * Initializes React app with WagmiProvider and BrowserRouter
+ */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { WagmiProvider } from 'wagmi'
