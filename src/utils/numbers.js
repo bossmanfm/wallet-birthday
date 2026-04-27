@@ -103,3 +103,10 @@ export function variance(arr) {
   const avg = average(arr);
   return arr.reduce((acc, val) => acc + Math.pow(val - avg, 2), 0) / arr.length;
 }
+
+/**
+ * Calculate standard deviation
+ */
+export function standardDeviation(arr) {
+  return Math.sqrt(variance(arr));
+}
