@@ -1,3 +1,7 @@
+/**
+ * Wagmi Configuration
+ * Sets up wallet connection providers and chain configuration
+ */
 import { http, createConfig } from 'wagmi'
 import { base, baseSepolia } from 'wagmi/chains'
 import { injected, metaMask } from 'wagmi/connectors'
