@@ -149,6 +149,9 @@ contract WalletBirthday is ERC721, Ownable {
     /**
      * @dev Override tokenURI to return stored URI
      */
+    /// @notice Get the metadata URI for a token
+    /// @param tokenId The token ID
+    /// @return The metadata URI
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
         require(ownerOf(tokenId) == msg.sender || ownerOf(tokenId) != address(0), "Not your token");
         return birthdays[tokenId].metadataURI;
