@@ -114,3 +114,14 @@ export function assign(target, ...sources) {
 export function defaults(obj, defaults) {
   return { ...defaults, ...obj };
 }
+
+/**
+ * Count items by key
+ */
+export function countBy(arr, keyFn) {
+  return arr.reduce((counts, item) => {
+    const key = keyFn(item);
+    counts[key] = (counts[key] || 0) + 1;
+    return counts;
+  }, {});
+}
