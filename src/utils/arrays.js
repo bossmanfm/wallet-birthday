@@ -57,3 +57,10 @@ export function last(arr) {
 export function flatten(arr) {
   return arr.reduce((flat, item) => flat.concat(Array.isArray(item) ? flatten(item) : item), []);
 }
+
+/**
+ * Remove falsy values from array
+ */
+export function compact(arr) {
+  return arr.filter(Boolean);
+}
