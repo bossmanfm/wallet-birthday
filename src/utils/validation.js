@@ -63,3 +63,10 @@ export function isEmpty(value) {
   if (typeof value === 'object') return Object.keys(value).length === 0;
   return false;
 }
+
+/**
+ * Check if value is numeric
+ */
+export function isNumeric(value) {
+  return !isNaN(parseFloat(value)) && isFinite(value);
+}
