@@ -65,3 +65,10 @@ export function mapValues(obj, fn) {
 export function mapKeys(obj, fn) {
   return Object.fromEntries(Object.entries(obj).map(([k, v]) => [fn(k), v]));
 }
+
+/**
+ * Invert object keys and values
+ */
+export function invert(obj) {
+  return Object.fromEntries(Object.entries(obj).map(([k, v]) => [v, k]));
+}
