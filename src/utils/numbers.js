@@ -95,3 +95,11 @@ export function mode(arr) {
 export function range(arr) {
   return max(arr) - min(arr);
 }
+
+/**
+ * Calculate variance
+ */
+export function variance(arr) {
+  const avg = average(arr);
+  return arr.reduce((acc, val) => acc + Math.pow(val - avg, 2), 0) / arr.length;
+}
