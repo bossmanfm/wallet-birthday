@@ -185,3 +185,10 @@ export function safeParseInt(value, defaultValue = 0) {
   const parsed = parseInt(value, 10);
   return isNaN(parsed) ? defaultValue : parsed;
 }
+
+/**
+ * Clamp value between min and max
+ */
+export function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
