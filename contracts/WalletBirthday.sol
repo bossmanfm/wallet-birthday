@@ -158,6 +158,7 @@ contract WalletBirthday is ERC721, Ownable {
      * @dev Withdraw function for any ETH sent to contract accidentally
      * Only owner can call
      */
+    /// @notice Withdraw accidentally sent ETH from the contract
     function withdraw() external onlyOwner {
         (bool success, ) = payable(owner()).call{value: address(this).balance}("");
         require(success, "Withdraw failed");
