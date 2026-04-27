@@ -92,3 +92,10 @@ export function union(arr1, arr2) {
 export function without(arr, ...values) {
   return arr.filter(item => !values.includes(item));
 }
+
+/**
+ * Zip two arrays together
+ */
+export function zip(arr1, arr2) {
+  return arr1.map((item, i) => [item, arr2[i]]);
+}
