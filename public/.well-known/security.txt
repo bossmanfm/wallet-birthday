@@ -1,0 +1,3 @@
+Contact: https://github.com/bossmanfm/wallet-birthday/issues
+Preferred-Languages: en
+Canonical: https://walletbirthday.xyz/.well-known/security.txt
