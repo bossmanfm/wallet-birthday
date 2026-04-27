@@ -1,3 +1,7 @@
+/**
+ * Public client configuration for blockchain interactions
+ * Uses public RPC endpoints for read-only operations
+ */
 import { createPublicClient, http, formatEther } from 'viem';
 import { base, baseSepolia } from 'viem/chains';
 
