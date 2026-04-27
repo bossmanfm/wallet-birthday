@@ -130,3 +130,15 @@ export function endOfDay(timestamp) {
   date.setHours(23, 59, 59, 999);
   return date.getTime();
 }
+
+/**
+ * Get start of week timestamp (Monday)
+ */
+export function startOfWeek(timestamp) {
+  const date = new Date(timestamp);
+  const day = date.getDay();
+  const diff = day === 0 ? -6 : 1 - day;
+  date.setDate(date.getDate() + diff);
+  date.setHours(0, 0, 0, 0);
+  return date.getTime();
+}
