@@ -50,3 +50,10 @@ export function isEmpty(arr) {
 export function last(arr) {
   return arr?.[arr.length - 1];
 }
+
+/**
+ * Flatten nested array
+ */
+export function flatten(arr) {
+  return arr.reduce((flat, item) => flat.concat(Array.isArray(item) ? flatten(item) : item), []);
+}
