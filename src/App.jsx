@@ -1,3 +1,8 @@
+/**
+ * Wallet Birthday - Main Application Component
+ * @module App
+ * @description Main entry point for the Wallet Birthday application
+ */
 import { useState, useRef, useEffect } from 'react';
 import { useAccount, useConnect, useDisconnect, useChainId, useSwitchChain } from 'wagmi';
 import { useWriteContract, useWaitForTransactionReceipt, useReadContract } from 'wagmi';
