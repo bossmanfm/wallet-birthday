@@ -161,3 +161,10 @@ export function addDays(timestamp, days) {
   date.setDate(date.getDate() + days);
   return date.getTime();
 }
+
+/**
+ * Subtract days from timestamp
+ */
+export function subtractDays(timestamp, days) {
+  return addDays(timestamp, -days);
+}
