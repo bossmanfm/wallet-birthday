@@ -100,3 +100,10 @@ export function values(obj) {
 export function entries(obj) {
   return Object.entries(obj);
 }
+
+/**
+ * Assign properties from source to target
+ */
+export function assign(target, ...sources) {
+  return Object.assign({}, target, ...sources);
+}
