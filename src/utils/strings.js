@@ -101,3 +101,10 @@ export function padLeft(str, length, char = ' ') {
 export function padRight(str, length, char = ' ') {
   return str.length >= length ? str : str + char.repeat(length - str.length);
 }
+
+/**
+ * Reverse a string
+ */
+export function reverseString(str) {
+  return str.split('').reverse().join('');
+}
