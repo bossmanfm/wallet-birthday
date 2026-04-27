@@ -133,6 +133,8 @@ contract WalletBirthday is ERC721, Ownable {
     /**
      * @dev Get total supply
      */
+    /// @notice Get the total number of minted badges
+    /// @return The total supply
     function totalSupply() public view returns (uint256) {
         return tokenIdCounter;
     }
