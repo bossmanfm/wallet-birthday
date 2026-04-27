@@ -48,3 +48,11 @@ export function lerp(start, end, t) {
 export function sum(arr) {
   return arr.reduce((acc, val) => acc + Number(val), 0);
 }
+
+/**
+ * Calculate average of array
+ */
+export function average(arr) {
+  if (arr.length === 0) return 0;
+  return sum(arr) / arr.length;
+}
