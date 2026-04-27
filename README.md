@@ -199,3 +199,37 @@ wallet-birthday/
 | `updateURI(tokenId, uri)` | Update token URI (owner) |
 | `emergencyTransfer(from, to, tokenId)` | Recover NFT (owner) |
 | `withdraw()` | Withdraw ETH (owner) |
+
+## Deployment Guide
+
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Configure Environment
+```bash
+cp .env.example .env
+# Edit .env with your keys
+```
+
+### 3. Run Tests
+```bash
+npx hardhat test
+```
+
+### 4. Deploy Contract
+```bash
+npx hardhat run scripts/deploy.js --network base
+```
+
+### 5. Update Config
+Update `src/contracts/config.js` with deployed address.
+
+### 6. Build Frontend
+```bash
+npm run build
+```
+
+### 7. Deploy Frontend
+Deploy `dist/` folder to Vercel or any static host.
