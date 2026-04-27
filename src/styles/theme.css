@@ -34,3 +34,24 @@
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
   --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.4);
 }
+
+/* === CSS Variables Reference ===
+ * --bg-primary: Main background
+ * --bg-secondary: Card/section background
+ * --text-primary: Main text color
+ * --text-secondary: Muted text color
+ * --accent-primary: Primary accent (buttons, links)
+ * --accent-secondary: Secondary accent
+ * --border-color: Border color
+ * --shadow-sm: Small shadow
+ * --shadow-md: Medium shadow
+ * --shadow-lg: Large shadow
+ * --radius-sm: Small border radius
+ * --radius-md: Medium border radius
+ * --radius-lg: Large border radius
+ * --spacing-xs: Extra small spacing
+ * --spacing-sm: Small spacing
+ * --spacing-md: Medium spacing
+ * --spacing-lg: Large spacing
+ * --spacing-xl: Extra large spacing
+ */
