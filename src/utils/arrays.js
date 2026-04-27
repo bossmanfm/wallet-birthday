@@ -106,3 +106,14 @@ export function zip(arr1, arr2) {
 export function unzip(pairs) {
   return [pairs.map(p => p[0]), pairs.map(p => p[1])];
 }
+
+/**
+ * Group array by key function
+ */
+export function groupBy(arr, keyFn) {
+  return arr.reduce((groups, item) => {
+    const key = keyFn(item);
+    (groups[key] = groups[key] || []).push(item);
+    return groups;
+  }, {});
+}
