@@ -50,5 +50,23 @@
     "typechain": "^8.3.2",
     "typescript": "^6.0.2",
     "vite": "^8.0.4"
-  }
+  },
+  "description": "Discover when your wallet was born and mint it as an NFT badge on Base",
+  "keywords": [
+    "wallet",
+    "birthday",
+    "nft",
+    "base",
+    "erc721",
+    "crypto"
+  ],
+  "homepage": "https://walletbirthday.xyz",
+  "bugs": {
+    "url": "https://github.com/bossmanfm/wallet-birthday/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bossmanfm/wallet-birthday"
+  },
+  "license": "MIT"
 }
