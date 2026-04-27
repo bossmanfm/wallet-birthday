@@ -41,3 +41,10 @@ export function percentage(part, total) {
 export function lerp(start, end, t) {
   return start + (end - start) * clamp(t, 0, 1);
 }
+
+/**
+ * Sum array of numbers
+ */
+export function sum(arr) {
+  return arr.reduce((acc, val) => acc + Number(val), 0);
+}
