@@ -65,3 +65,11 @@ export function slugify(str) {
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+
+/**
+ * Add ellipsis to truncated text
+ */
+export function ellipsis(text, maxLength = 50, suffix = '...') {
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength - suffix.length) + suffix;
+}
