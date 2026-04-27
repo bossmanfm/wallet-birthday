@@ -71,3 +71,10 @@ export function compact(arr) {
 export function difference(arr1, arr2) {
   return arr1.filter(item => !arr2.includes(item));
 }
+
+/**
+ * Get intersection of two arrays
+ */
+export function intersection(arr1, arr2) {
+  return arr1.filter(item => arr2.includes(item));
+}
