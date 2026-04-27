@@ -181,3 +181,21 @@ wallet-birthday/
 ├── public/                   # Static assets
 └── docs/                     # Documentation
 ```
+
+## Smart Contract API
+
+### View Functions
+| Function | Description |
+|----------|-------------|
+| `hasMinted(address)` | Check if wallet has minted |
+| `tokenURI(uint256)` | Get token metadata URI |
+| `totalSupply()` | Get total minted count |
+| `getBirthdayByWallet(address)` | Get birthday data |
+
+### Write Functions
+| Function | Description |
+|----------|-------------|
+| `mintBirthday(timestamp, age, uri)` | Mint NFT badge |
+| `updateURI(tokenId, uri)` | Update token URI (owner) |
+| `emergencyTransfer(from, to, tokenId)` | Recover NFT (owner) |
+| `withdraw()` | Withdraw ETH (owner) |
