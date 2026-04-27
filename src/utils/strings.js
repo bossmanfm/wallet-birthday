@@ -94,3 +94,10 @@ export function countOccurrences(str, substr) {
 export function padLeft(str, length, char = ' ') {
   return str.length >= length ? str : char.repeat(length - str.length) + str;
 }
+
+/**
+ * Pad string on the right
+ */
+export function padRight(str, length, char = ' ') {
+  return str.length >= length ? str : str + char.repeat(length - str.length);
+}
