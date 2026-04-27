@@ -29,3 +29,12 @@ h2 {
   font-weight: 600;
   letter-spacing: -0.01em;
 }
+
+/* === Print Styles === */
+@media print {
+  body { background: white; }
+  .app { max-width: none; }
+  .btn-primary, .btn-nft, .btn-disconnect-small { display: none; }
+  .card-container { box-shadow: none; }
+  .share-section, .footer { display: none; }
+}
