@@ -93,3 +93,10 @@ export function keys(obj) {
 export function values(obj) {
   return Object.values(obj);
 }
+
+/**
+ * Get object entries
+ */
+export function entries(obj) {
+  return Object.entries(obj);
+}
