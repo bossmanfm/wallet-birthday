@@ -250,3 +250,7 @@ The NFT is minted on Base mainnet. If you need help, contact the maintainer.
 
 ### Why can't I find my wallet birthday?
 Your wallet might not have any on-chain activity yet. Make a transaction first.
+
+## License
+
+MIT License - see LICENSE file for details.
