@@ -73,3 +73,10 @@ export function ellipsis(text, maxLength = 50, suffix = '...') {
   if (text.length <= maxLength) return text;
   return text.slice(0, maxLength - suffix.length) + suffix;
 }
+
+/**
+ * Repeat string n times
+ */
+export function repeat(str, times) {
+  return str.repeat(times);
+}
