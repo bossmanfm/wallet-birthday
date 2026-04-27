@@ -32,6 +32,8 @@ contract WalletBirthday is ERC721, Ownable {
         address to
     );
     
+    /// @notice Initialize the contract with max supply
+    /// @param maxSupply Maximum number of NFTs that can be minted
     constructor() ERC721("Wallet Birthday", "WBDAY") Ownable(msg.sender) {}
     
     /**
