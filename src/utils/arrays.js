@@ -117,3 +117,13 @@ export function groupBy(arr, keyFn) {
     return groups;
   }, {});
 }
+
+/**
+ * Partition array into two based on predicate
+ */
+export function partition(arr, predicate) {
+  return arr.reduce(([pass, fail], item) => {
+    predicate(item) ? pass.push(item) : fail.push(item);
+    return [pass, fail];
+  }, [[], []]);
+}
