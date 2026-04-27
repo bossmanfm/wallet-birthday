@@ -112,3 +112,12 @@ export function isLeapYear(year) {
 export function daysInMonth(year, month) {
   return new Date(year, month, 0).getDate();
 }
+
+/**
+ * Get start of day timestamp
+ */
+export function startOfDay(timestamp) {
+  const date = new Date(timestamp);
+  date.setHours(0, 0, 0, 0);
+  return date.getTime();
+}
