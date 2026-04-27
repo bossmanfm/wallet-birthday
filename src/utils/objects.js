@@ -79,3 +79,10 @@ export function invert(obj) {
 export function has(obj, key) {
   return Object.prototype.hasOwnProperty.call(obj, key);
 }
+
+/**
+ * Get object keys (alias for Object.keys)
+ */
+export function keys(obj) {
+  return Object.keys(obj);
+}
