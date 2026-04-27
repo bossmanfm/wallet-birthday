@@ -121,6 +121,9 @@ contract WalletBirthday is ERC721, Ownable {
     /**
      * @dev Get birthday info by wallet address
      */
+    /// @notice Get birthday data for a specific wallet
+    /// @param wallet The wallet address
+    /// @return firstTxTimestamp and ageInDays
     function getBirthdayByWallet(address wallet) public view returns (Birthday memory) {
         uint256 tokenId = walletToTokenId[wallet];
         require(tokenId > 0, "No birthday found");
