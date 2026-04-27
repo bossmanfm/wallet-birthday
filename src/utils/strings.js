@@ -43,3 +43,13 @@ export function randomString(length = 10) {
   const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
   return Array.from({ length }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
 }
+
+/**
+ * Capitalize all words in a string
+ */
+export function capitalizeAll(str) {
+  return str
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+}
