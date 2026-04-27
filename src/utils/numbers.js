@@ -56,3 +56,10 @@ export function average(arr) {
   if (arr.length === 0) return 0;
   return sum(arr) / arr.length;
 }
+
+/**
+ * Get minimum value from array
+ */
+export function min(arr) {
+  return Math.min(...arr);
+}
