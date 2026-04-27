@@ -1,5 +1,8 @@
 // SPDX-License-Identifier: MIT
 // SPDX-License-Identifier: MIT
+/// @title Wallet Birthday NFT Badge
+/// @author bossmanfm
+/// @notice NFT contract for wallet birthday badges
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
