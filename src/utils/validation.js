@@ -70,3 +70,10 @@ export function isEmpty(value) {
 export function isNumeric(value) {
   return !isNaN(parseFloat(value)) && isFinite(value);
 }
+
+/**
+ * Check if value is a positive integer
+ */
+export function isPositiveInteger(value) {
+  return Number.isInteger(value) && value > 0;
+}
