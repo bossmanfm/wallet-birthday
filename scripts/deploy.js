@@ -1,3 +1,7 @@
+/**
+ * Deployment Script for WalletBirthday Contract
+ * Usage: npx hardhat run scripts/deploy.js --network base
+ */
 import hre from "hardhat";
 
 async function main() {
