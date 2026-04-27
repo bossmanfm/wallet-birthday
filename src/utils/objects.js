@@ -107,3 +107,10 @@ export function entries(obj) {
 export function assign(target, ...sources) {
   return Object.assign({}, target, ...sources);
 }
+
+/**
+ * Set default values for undefined properties
+ */
+export function defaults(obj, defaults) {
+  return { ...defaults, ...obj };
+}
