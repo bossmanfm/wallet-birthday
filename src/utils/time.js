@@ -142,3 +142,13 @@ export function startOfWeek(timestamp) {
   date.setHours(0, 0, 0, 0);
   return date.getTime();
 }
+
+/**
+ * Get end of week timestamp (Sunday)
+ */
+export function endOfWeek(timestamp) {
+  const date = new Date(startOfWeek(timestamp));
+  date.setDate(date.getDate() + 6);
+  date.setHours(23, 59, 59, 999);
+  return date.getTime();
+}
