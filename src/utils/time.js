@@ -91,3 +91,10 @@ export function formatTime(timestamp) {
   const date = new Date(timestamp);
   return date.toLocaleTimeString('en-US', { hour12: false });
 }
+
+/**
+ * Format date and time
+ */
+export function formatDateTime(timestamp) {
+  return `${formatDateISO(timestamp)} ${formatTime(timestamp)}`;
+}
