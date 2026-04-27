@@ -285,3 +285,10 @@ MIT License - see LICENSE file for details.
 ## IPFS Guide
 
 For pinning NFT metadata to IPFS, see [docs/IPFS_GUIDE.md](docs/IPFS_GUIDE.md)
+
+## Badges
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Solidity](https://img.shields.io/badge/Solidity-0.8.24-blue.svg)
+![Base](https://img.shields.io/badge/Network-Base-0052ff.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
