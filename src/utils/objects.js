@@ -51,3 +51,10 @@ export function pick(obj, keys) {
 export function omit(obj, keys) {
   return Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
 }
+
+/**
+ * Map values of object
+ */
+export function mapValues(obj, fn) {
+  return Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, fn(v)]));
+}
