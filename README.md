@@ -160,3 +160,24 @@ MIT
 - **Method**: Binary search on public RPC
 - **Optimization**: Etherscan API (optional)
 - **Multi-chain**: Scans across multiple networks
+
+## Project Structure
+
+```
+wallet-birthday/
+├── contracts/
+│   └── WalletBirthday.sol    # Smart contract
+├── scripts/
+│   └── deploy.js             # Deployment script
+├── test/
+│   └── WalletBirthday.test.js # Test suite
+├── src/
+│   ├── components/           # React components
+│   ├── contracts/            # Contract config & ABI
+│   ├── utils/                # Utility functions
+│   ├── styles/               # CSS stylesheets
+│   ├── App.jsx               # Main app component
+│   └── main.jsx              # Entry point
+├── public/                   # Static assets
+└── docs/                     # Documentation
+```
