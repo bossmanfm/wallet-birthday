@@ -38,3 +38,13 @@ h2 {
   .card-container { box-shadow: none; }
   .share-section, .footer { display: none; }
 }
+
+/* === Focus Styles === */
+*:focus-visible {
+  outline: 2px solid var(--accent-primary, #0052ff);
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
