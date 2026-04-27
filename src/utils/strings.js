@@ -87,3 +87,10 @@ export function repeat(str, times) {
 export function countOccurrences(str, substr) {
   return str.split(substr).length - 1;
 }
+
+/**
+ * Pad string on the left
+ */
+export function padLeft(str, length, char = ' ') {
+  return str.length >= length ? str : char.repeat(length - str.length) + str;
+}
