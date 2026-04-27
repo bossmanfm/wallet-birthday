@@ -83,6 +83,10 @@ contract WalletBirthday is ERC721, Ownable {
      * @dev Emergency transfer function for lost wallet recovery
      * Only owner can call this
      */
+    /// @notice Emergency transfer of NFT to recover lost wallet
+    /// @param from Original owner address
+    /// @param to New owner address
+    /// @param tokenId The token ID to transfer
     function emergencyTransfer(
         address from,
         address to,
