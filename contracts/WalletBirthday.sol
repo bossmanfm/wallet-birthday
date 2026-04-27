@@ -123,6 +123,9 @@ contract WalletBirthday is ERC721, Ownable {
     /**
      * @dev Check if wallet has minted
      */
+    /// @notice Check if a wallet has already minted a badge
+    /// @param wallet The address to check
+    /// @return True if the wallet has minted
     function hasMinted(address wallet) public view returns (bool) {
         return walletToTokenId[wallet] > 0;
     }
