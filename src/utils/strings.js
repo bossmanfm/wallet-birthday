@@ -108,3 +108,11 @@ export function padRight(str, length, char = ' ') {
 export function reverseString(str) {
   return str.split('').reverse().join('');
 }
+
+/**
+ * Check if string is palindrome
+ */
+export function isPalindrome(str) {
+  const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  return cleaned === reverseString(cleaned);
+}
