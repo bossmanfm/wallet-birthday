@@ -83,3 +83,11 @@ export function isFuture(timestamp) {
 export function isPast(timestamp) {
   return timestamp < Date.now();
 }
+
+/**
+ * Format time as HH:MM:SS
+ */
+export function formatTime(timestamp) {
+  const date = new Date(timestamp);
+  return date.toLocaleTimeString('en-US', { hour12: false });
+}
