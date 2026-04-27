@@ -281,3 +281,7 @@ MIT License - see LICENSE file for details.
 - [x] URI update function
 - [x] Comprehensive test suite
 - [x] Full documentation
+
+## IPFS Guide
+
+For pinning NFT metadata to IPFS, see [docs/IPFS_GUIDE.md](docs/IPFS_GUIDE.md)
