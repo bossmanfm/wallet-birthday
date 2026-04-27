@@ -199,3 +199,10 @@ export function clamp(value, min, max) {
 export function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+/**
+ * Convert number to hex string
+ */
+export function toHex(num) {
+  return '0x' + Number(num).toString(16);
+}
