@@ -99,3 +99,10 @@ export function without(arr, ...values) {
 export function zip(arr1, arr2) {
   return arr1.map((item, i) => [item, arr2[i]]);
 }
+
+/**
+ * Unzip array of pairs
+ */
+export function unzip(pairs) {
+  return [pairs.map(p => p[0]), pairs.map(p => p[1])];
+}
