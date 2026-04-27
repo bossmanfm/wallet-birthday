@@ -80,3 +80,10 @@ export function ellipsis(text, maxLength = 50, suffix = '...') {
 export function repeat(str, times) {
   return str.repeat(times);
 }
+
+/**
+ * Count occurrences of substring
+ */
+export function countOccurrences(str, substr) {
+  return str.split(substr).length - 1;
+}
