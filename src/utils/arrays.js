@@ -78,3 +78,10 @@ export function difference(arr1, arr2) {
 export function intersection(arr1, arr2) {
   return arr1.filter(item => arr2.includes(item));
 }
+
+/**
+ * Get union of two arrays
+ */
+export function union(arr1, arr2) {
+  return [...new Set([...arr1, ...arr2])];
+}
