@@ -152,3 +152,12 @@ export function endOfWeek(timestamp) {
   date.setHours(23, 59, 59, 999);
   return date.getTime();
 }
+
+/**
+ * Add days to timestamp
+ */
+export function addDays(timestamp, days) {
+  const date = new Date(timestamp);
+  date.setDate(date.getDate() + days);
+  return date.getTime();
+}
