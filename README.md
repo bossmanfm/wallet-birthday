@@ -254,3 +254,11 @@ Your wallet might not have any on-chain activity yet. Make a transaction first.
 ## License
 
 MIT License - see LICENSE file for details.
+
+## Acknowledgements
+
+- [Base](https://base.org) for the L2 network
+- [OpenZeppelin](https://openzeppelin.com) for contract standards
+- [wagmi](https://wagmi.sh) for React hooks
+- [viem](https://viem.sh) for TypeScript Ethereum library
+- [Hardhat](https://hardhat.org) for development environment
