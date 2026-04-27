@@ -160,3 +160,11 @@ export function getCachedClient(chainId = 8453) {
   }
   return clientCache.get(chainId);
 }
+
+/**
+ * Format wallet address with custom length
+ */
+export function formatAddressWithLength(address, startLen = 6, endLen = 4) {
+  if (!address) return '';
+  return `${address.slice(0, startLen)}...${address.slice(-endLen)}`;
+}
