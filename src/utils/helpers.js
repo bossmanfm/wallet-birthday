@@ -145,3 +145,18 @@ export function formatAddress(address) {
   if (!address) return '';
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
 }
+
+// Performance optimization: Cache public client instances
+const clientCache = new Map();
+
+/**
+ * Get cached public client
+ * @param {number} chainId - Chain ID
+ * @returns {object} Public client instance
+ */
+export function getCachedClient(chainId = 8453) {
+  if (!clientCache.has(chainId)) {
+    clientCache.set(chainId, getPublicClient(chainId));
+  }
+  return clientCache.get(chainId);
+}
