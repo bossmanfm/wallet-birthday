@@ -104,6 +104,9 @@ contract WalletBirthday is ERC721, Ownable {
      * @dev Update URI for specific token (owner only)
      * For fixing broken metadata
      */
+    /// @notice Update the metadata URI for a token
+    /// @param tokenId The token ID to update
+    /// @param newUri The new metadata URI
     function updateURI(
         uint256 tokenId,
         string memory newUri
