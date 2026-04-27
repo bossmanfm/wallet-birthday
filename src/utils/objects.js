@@ -86,3 +86,10 @@ export function has(obj, key) {
 export function keys(obj) {
   return Object.keys(obj);
 }
+
+/**
+ * Get object values
+ */
+export function values(obj) {
+  return Object.values(obj);
+}
