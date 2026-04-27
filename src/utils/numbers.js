@@ -88,3 +88,10 @@ export function mode(arr) {
   arr.forEach(val => counts[val] = (counts[val] || 0) + 1);
   return Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
 }
+
+/**
+ * Calculate range (max - min)
+ */
+export function range(arr) {
+  return max(arr) - min(arr);
+}
