@@ -1,4 +1,8 @@
 /**
+ * Application State Management
+ * Uses React hooks for local state management
+ */
+/**
  * Wallet Birthday - Main Application Component
  * @module App
  * @description Main entry point for the Wallet Birthday application
