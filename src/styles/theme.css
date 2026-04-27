@@ -55,3 +55,9 @@
  * --spacing-lg: Large spacing
  * --spacing-xl: Extra large spacing
  */
+
+/* === Dark Mode Support (Future) === */
+@media (prefers-color-scheme: dark) {
+  /* Dark theme variables can be added here */
+  /* :root { --bg-primary: #1a1a2e; } */
+}
